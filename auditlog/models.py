@@ -20,8 +20,10 @@ from django.db import DEFAULT_DB_ALIAS, models
 from django.db.models import Q, QuerySet
 from django.utils import formats
 from django.utils import timezone as django_timezone
-from django.utils.encoding import smart_str
 from django.utils.translation import gettext_lazy as _
+from six import python_2_unicode_compatible, iteritems, integer_types
+
+from django.utils.encoding import smart_str
 
 from auditlog.diff import mask_str
 
